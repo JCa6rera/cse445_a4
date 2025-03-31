@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hotel> <!-- Error #1: root element is Hotel instead of Hotels -->
+
+    <Hotel>
+        <Name>Westin</Name>
+        <Phone>480-968-8885</Phone>
+        <Address>
+        <!-- Error #2: the required attribute NearstAirport is missing -->
+            <Number>11</Number>
+            <Street>E. 7th St</Street>
+            <City>Tempe</City>
+            <State>AZ</State>
+            <Zip>85281</Zip>
+        </Address>
+    </Hotel>
+
+    <Hotel>
+        <Name>Hilton Los Angeles</Name>
+        <!-- Error #3: the phone element is missing -->
+        <Address NearstAirport="LAX">
+            <Number>5711</Number>
+            <Street>W Century Blvd</Street>
+            <City>Los Angeles</City>
+            <State>CA</State>
+            <Zip>90045</Zip>
+        </Address>
+    </Hotel>
+
+    <Hotel>
+        <Name>Marriott New York</Name>
+        <Phone>718-565-8900</Phone>
+        <Phone>718-555-6789</Phone>
+        <Address NearstAirport="JFK">
+            <Number>135</Number>
+            <Street>North Terminal Road</Street>
+            <City>New York</City>
+            <State>NY</State>
+            <Zip>11430</Zip>
+        <!-- Error #4: Address elect has no closing tag -->
+    </Hotel>
+
+    <Hotel Rating="3.9">
+        <Name>Hyatt Regency Chicago</Name>
+        <!-- Error #5: two names provided for the hotel -->
+        <Name>Chicago Downtown The Loop</Name>
+        <Phone>312-565-1234</Phone>
+        <Address NearstAirport="ORD">
+            <Number>151</Number>
+            <Street>E Wacker Dr</Street>
+            <City>Chicago</City>
+            <State>IL</State>
+            <Zip>60601</Zip>
+        </Address>
+    </Hotel>
+
+</Hotel>
